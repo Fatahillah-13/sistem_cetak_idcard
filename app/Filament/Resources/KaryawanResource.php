@@ -15,6 +15,8 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Filament\Actions\ForceDeleteAction;
+use Filament\Forms\Components\Wizard;
+use Illuminate\Support\HtmlString;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class KaryawanResource extends Resource
