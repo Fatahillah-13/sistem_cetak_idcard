@@ -18,6 +18,7 @@ use Filament\Actions\ForceDeleteAction;
 use Filament\Forms\Components\Wizard;
 use Illuminate\Support\HtmlString;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\ViewField;
 
 class KaryawanResource extends Resource
 {
@@ -52,10 +53,8 @@ class KaryawanResource extends Resource
                         'Staff',
                         'Senior Staff',
                     ]),
-                TextInput::make('foto_karyawan')
-                    ->label('Foto')
-                    ->reactive()
-                    ->required(),
+                ViewField::make('foto_karyawan')
+                    ->view('forms.components.webcam-c-apture')
 
             ]);
     }
